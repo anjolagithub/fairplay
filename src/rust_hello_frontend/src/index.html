@@ -1,24 +1,160 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin Donation Interface</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+    
+    h1, h2 {
+      color: #333;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    /* Add more custom styles as needed */
+    
+  </style>
+</head>
+<body>
+
+  <h1>Bitcoin Donation User Interface</h1>
+
+  <!-- School and Student Selection -->
+  <label for="school">Select a School:</label>
+  <select id="school">
+    <option value="school1">School 1</option>
+    <option value="school2">School 2</option>
+    <!-- Add more schools as needed -->
+  </select>
+
+  <label for="student">Select a Student:</label>
+  <select id="student">
+    <option value="student1">Student 1</option>
+    <option value="student2">Student 2</option>
+    <!-- Add more students as needed -->
+  </select>
+
+  <!-- Total Amount of Bitcoin -->
+  <label for="totalAmount">Total Bitcoin to Donate:</label>
+  <input type="number" id="totalAmount" step="0.00000001" placeholder="Enter amount">
+
+  <!-- Donation Categories -->
+  <h2>Allocation Across Categories:</h2>
+  <label for="curriculum">Curriculum Design and Development:</label>
+  <input type="number" id="curriculum" step="0.00000001" placeholder="Enter amount">
+
+  <label for="teacherSupport">Teacher Support:</label>
+  <input type="number" id="teacherSupport" step="0.00000001" placeholder="Enter amount">
+
+  <label for="schoolSupplies">School Supplies:</label>
+  <input type="number" id="schoolSupplies" step="0.00000001" placeholder="Enter amount">
+
+  <label for="lunchSnacks">Lunch and Snacks:</label>
+  <input type="number" id="lunchSnacks" step="0.00000001" placeholder="Enter amount">
+
+  <!-- Donation Button -->
+  <button onclick="submitDonation()">Donate Now</button>
+
+  <script>
+    function submitDonation() {
+      // Retrieve values from the form
+      const selectedSchool = document.getElementById('school').value;
+      const selectedStudent = document.getElementById('student').value;
+      const totalAmount = document.getElementById('totalAmount').value;
+      const curriculumAmount = document.getElementById('curriculum').value;
+      const teacherSupportAmount = document.getElementById('teacherSupport').value;
+      const schoolSuppliesAmount = document.getElementById('schoolSupplies').value;
+      const lunchSnacksAmount = document.getElementById('lunchSnacks').value;
+
+      // Send these values to your backend for processing
+      console.log({
+        selectedSchool,
+        selectedStudent,
+        totalAmount,
+        curriculumAmount,
+        teacherSupportAmount,
+        schoolSuppliesAmount,
+        lunchSnacksAmount,
+      });
+
+      // Add logic to handle the donation, e.g., display confirmation message
+      alert('Donation Successful!');
+    }
+  </script>
+
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>rust_hello</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Donation Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="app">
+        <h1>Bitcoin Donation User Interface</h1>
+
+        <div id="schoolSelection">
+            <label for="schools">Select a School:</label>
+            <select id="schools">
+                <option value="school1">School 1</option>
+                <option value="school2">School 2</option>
+                <!-- Add more schools as needed -->
+            </select>
+
+            <label for="students">Select a Student:</label>
+            <select id="students">
+                <option value="student1">Student 1</option>
+                <option value="student2">Student 2</option>
+                <!-- Add more students as needed -->
+            </select>
+        </div>
+
+        <label for="totalAmount">Total Bitcoin to Donate:</label>
+        <input type="number" id="totalAmount" step="0.00000001" placeholder="Enter amount">
+
+        <div id="categoryAllocation">
+            <h2>Allocation Across Categories:</h2>
+            <!-- Add input fields for category allocation -->
+            <!-- Example: Curriculum design and development -->
+            <label for="curriculum">Curriculum Design:</label>
+            <input type="number" id="curriculum" step="0.00000001" placeholder="Enter amount">
+            <!-- Add similar fields for other categories -->
+        </div>
+
+        <button onclick="submitDonation()">Donate Now</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
 </html>

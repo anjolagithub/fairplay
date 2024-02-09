@@ -1,4 +1,3 @@
 [workspace]
-members = [
-    "src/rust_hello_backend",
-]
+members = ["src/rust_hello_backend"]
+resolver = "2"
